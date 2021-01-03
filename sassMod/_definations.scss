@@ -1,0 +1,75 @@
+@mixin flexCenter($value-d:flex, $value-jc:center, $value-ai:center){
+  display: $value-d;
+  justify-content: $value-jc;
+  align-items: $value-ai;
+}
+
+// flex center
+@mixin flexSpaceBetween($value-d:flex, $value-jc:space-between, $value-ai:center){
+  display: $value-d;
+  justify-content: $value-jc;
+  align-items: $value-ai;
+}
+
+// transition
+@mixin transition($value: $t-transition) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+
+
+// transform scale
+@mixin transform-scale($value :$t-scale) {
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+
+
+// transform rotate
+@mixin transform-rotate($value: $t-rotate) {
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+    transform: rotate($value);
+}
+// gradient - vertical - yatay
+@mixin gradient-vertical($position: to right top, $first-color: rgba(0,0,0,.0), $second-color: rgba(0,0,0,1), $third-color: rgba(0,0,0,.0), $fourth-color: rgba(0,0,0,1), $fived-color: rgba(0,0,0,1) ) {
+  background-image: -webkit-linear-gradient($position, $first-color, $third-color, $fourth-color, $fived-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($position, $first-color, $third-color, $fourth-color, $fived-color); // Opera 12
+  background-image: linear-gradient($position, $first-color, $third-color, $fourth-color, $fived-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+// gradient - horizontal - dikey
+@mixin gradient-horizontal($start-color: rgba(0,0,0,.0), $end-color: rgba(0,0,0,1), $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+
+// gradient - diagonal - çapraz
+@mixin gradient-diagonal($start-color: rgba(0,0,0,1), $end-color: rgba(0,0,0,.0), $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+// border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin background-image( $bg-color: #2b2d34, $url: '', $position : center, $bg-size: cover){
+	background: $bg-color url($url) $position;
+     background-size: $bg-size;
+}
