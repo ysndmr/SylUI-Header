@@ -94,7 +94,11 @@ header {
 	font-size:2rem!important;
 }
   section {
-    padding: 6vw !important;
+    &.header{
+          padding: 6vw !important;
+          margin:0 0 2rem 0!important
+    }
+
   }
   .navigation {
     display: none !important;
