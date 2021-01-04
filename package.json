@@ -1,0 +1,26 @@
+{
+  "name": "sylui-header",
+  "version": "1.0.0",
+  "description": "Header HTML UI Kit. You can use this html and css kit.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ysndmr/SylUI-Header.git"
+  },
+  "keywords": [
+    "HTML5",
+    "Sass",
+    "css3",
+    "gulp.js",
+    "ui kit"
+  ],
+  "author": "Yasin Demir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysndmr/SylUI-Header/issues"
+  },
+  "homepage": "https://github.com/ysndmr/SylUI-Header/blob/main/README.md"
+}
